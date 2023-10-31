@@ -17,7 +17,9 @@ export class TasksController {
   constructor(private tasksServices: TasksService) {}
 
   @Post()
-  createTask(@Body() createTaskDTO: CreateTaskDTO): Tasks[] {
+  createTask(@Body() createTaskDTO: CreateTaskDTO) {
+    console.log(createTaskDTO);
+    console.log('gi');
     return this.tasksServices.createTask(createTaskDTO);
   }
 
