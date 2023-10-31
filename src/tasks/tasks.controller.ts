@@ -18,8 +18,6 @@ export class TasksController {
 
   @Post()
   createTask(@Body() createTaskDTO: CreateTaskDTO) {
-    console.log(createTaskDTO);
-    console.log('gi');
     return this.tasksServices.createTask(createTaskDTO);
   }
 
