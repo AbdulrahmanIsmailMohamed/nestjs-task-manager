@@ -33,8 +33,10 @@ export class TasksController {
   @Get()
   getTasks(@Query() filterTasksDTO: FilterTasksDTO): Tasks[] {
     if (filterTasksDTO) {
-      this.tasksServices.getTasksWithFilter(filterTasksDTO);
+      return this.tasksServices.getTasksWithFilter(filterTasksDTO);
     } else {
+      console.log('gu8');
+
       return this.tasksServices.getTasks();
     }
   }
